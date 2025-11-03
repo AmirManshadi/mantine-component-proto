@@ -6,8 +6,8 @@ import {
 import RootLayout from "./layouts/root-layout.tsx";
 import Home from "./pages/home.tsx";
 import About from "./pages/about.tsx";
-import ButtonShowcase from "./pages/components/button-showcase.tsx";
-import AlertShowcase from "./pages/components/alert-showcase.tsx";
+import ButtonShowcase from "./pages/components/button.tsx";
+import AlertShowcase from "./pages/components/alert.tsx";
 import NotFound from "./pages/not-found.tsx";
 
 // Root route
