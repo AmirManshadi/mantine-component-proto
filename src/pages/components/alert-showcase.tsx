@@ -1,6 +1,10 @@
 import { Container, Title, Text, Button, Alert, Group } from "@mantine/core";
 import { Link } from "@tanstack/react-router";
-import { IconAlertCircle, IconCheck, IconInfoCircle } from "@tabler/icons-react";
+import {
+	IconAlertCircle,
+	IconCheck,
+	IconInfoCircle
+} from "@tabler/icons-react";
 
 export default function AlertShowcase() {
 	return (
@@ -48,11 +52,7 @@ export default function AlertShowcase() {
 						>
 							This is a warning alert with an icon.
 						</Alert>
-						<Alert
-							icon={<IconCheck size={16} />}
-							title="Success"
-							color="green"
-						>
+						<Alert icon={<IconCheck size={16} />} title="Success" color="green">
 							This is a success alert with an icon.
 						</Alert>
 						<Alert

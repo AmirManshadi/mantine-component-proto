@@ -1,13 +1,14 @@
 import { Container, Title, Text, Card, Group, Badge } from "@mantine/core";
 import { Link } from "@tanstack/react-router";
-import { IconButton, IconAlertCircle } from "@tabler/icons-react";
+import { IconAlertCircle, IconBubble } from "@tabler/icons-react";
 
 const components = [
 	{
 		name: "Button",
-		description: "Interactive button component with multiple variants and sizes",
+		description:
+			"Interactive button component with multiple variants and sizes",
 		path: "/components/button",
-		icon: IconButton,
+		icon: IconBubble,
 		color: "blue"
 	},
 	{
@@ -27,12 +28,13 @@ export default function Home() {
 					Component Showcase
 				</Title>
 				<Text className="text-lg text-gray-600">
-					Explore and interact with our collection of reusable UI components built with Mantine UI and Tailwind CSS.
+					Explore and interact with our collection of reusable UI components
+					built with Mantine UI and Tailwind CSS.
 				</Text>
 			</div>
 
 			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-				{components.map((component) => {
+				{components.map(component => {
 					const IconComponent = component.icon;
 					return (
 						<Link key={component.path} to={component.path}>
