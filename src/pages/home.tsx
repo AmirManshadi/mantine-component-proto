@@ -9,29 +9,11 @@ import {
 	SimpleGrid
 } from "@mantine/core";
 import { Link } from "@tanstack/react-router";
-import { IconAlertCircle, IconBubble } from "@tabler/icons-react";
-
-const components = [
-	{
-		name: "Button",
-		description:
-			"Interactive button component with multiple variants and sizes",
-		path: "/components/button",
-		icon: IconBubble,
-		color: "blue"
-	},
-	{
-		name: "Alert",
-		description: "Alert component for displaying messages and notifications",
-		path: "/components/alert",
-		icon: IconAlertCircle,
-		color: "red"
-	}
-];
+import { COMPONENT_SHOWCASE_ITEMS, APP_CONFIG } from "../config/constants";
 
 export default function Home() {
 	return (
-		<Container size="lg">
+		<Container size={APP_CONFIG.containerSize}>
 			<Stack gap="xl">
 				<div>
 					<Title order={1} mb="md">
@@ -44,7 +26,7 @@ export default function Home() {
 				</div>
 
 				<SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="lg">
-					{components.map(component => {
+					{COMPONENT_SHOWCASE_ITEMS.map(component => {
 						const IconComponent = component.icon;
 						return (
 							<Link key={component.path} to={component.path}>
