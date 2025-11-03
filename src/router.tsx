@@ -3,7 +3,7 @@ import {
 	createRoute,
 	createRouter
 } from "@tanstack/react-router";
-import RootLayout from "./pages/root-layout.tsx";
+import RootLayout from "./layouts/root-layout.tsx";
 import Home from "./pages/home.tsx";
 import About from "./pages/about.tsx";
 import ButtonShowcase from "./pages/components/button-showcase.tsx";
