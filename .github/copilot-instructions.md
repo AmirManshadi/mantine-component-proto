@@ -7,6 +7,7 @@ A React 19 + TypeScript + Vite component showcase application demonstrating mode
 ## Critical Architecture
 
 ### Data Flow
+
 ```
 config/constants.ts (NAV_ITEMS, COMPONENT_SHOWCASE_ITEMS, APP_CONFIG)
   ↓
@@ -64,12 +65,17 @@ export const routeTree = rootRoute.addChildren([homeRoute, aboutRoute, ...]);
 ```
 
 **`src/router.tsx`** imports and uses this:
+
 ```typescript
 import { routeTree } from "./routes";
-export const router = createRouter({ routeTree, basepath: APP_CONFIG.basePath });
+export const router = createRouter({
+	routeTree,
+	basepath: APP_CONFIG.basePath
+});
 ```
 
 **To add a new page:**
+
 1. Create `src/pages/{name}.tsx`
 2. Add route export in `src/routes/index.ts` (e.g., `export const myRoute = createRoute(...)`)
 3. Add to `routeTree` children array
@@ -78,16 +84,18 @@ export const router = createRouter({ routeTree, basepath: APP_CONFIG.basePath })
 ## Component Patterns
 
 ### ComponentShowcase Template (DRY for showcase pages)
+
 ```typescript
 // src/components/ComponentShowcase.tsx
 interface ComponentShowcaseProps {
-  title: string;
-  description: string;
-  sections: Array<{ title: string; description?: string; children: ReactNode }>;
+	title: string;
+	description: string;
+	sections: Array<{ title: string; description?: string; children: ReactNode }>;
 }
 ```
 
 **Usage** (`src/pages/components/button.tsx`):
+
 ```typescript
 <ComponentShowcase
   title="Button Component"
@@ -100,6 +108,7 @@ interface ComponentShowcaseProps {
 ```
 
 ### Navigation & Active State
+
 ```typescript
 // components/Navigation.tsx
 {NAV_ITEMS.map(item => (
@@ -133,28 +142,31 @@ npm run preview      # Preview production build
 ## Conventions
 
 ### Commit Messages (Conventional Commits)
+
 - Format: `type(scope): subject`
 - Types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `chore`, `ci`
 - Scopes: `router`, `components`, `pages`, `layouts`, `styles`, `deps`, `config`
 - Example: `feat(pages): add card showcase` or `fix(config): update nav items`
 
 ### Code Patterns
+
 - **React Compiler**: Enabled (babel-plugin-react-compiler in vite.config.ts)—monitor perf with heavy components
 - **Type safety**: Strict TypeScript; avoid `any`
 - **Icons**: Tabler Icons (`@tabler/icons-react`)—tree-shakeable, imported as needed
 
 ## Key Dependencies & Gotchas
 
-| Package | Use | Gotcha |
-|---------|-----|--------|
-| `@mantine/core` | All UI components | Use Mantine breakpoints, not Tailwind, in components |
-| `@tanstack/react-router` | Client routing | Must declare `Register` interface in `router.tsx` for type safety |
-| `@tabler/icons-react` | Icons | Tree-shakeable; import only what you use |
-| `recharts` (via `@mantine/charts`) | Charts | Available; not yet used in this project |
-| `dayjs` (via `@mantine/dates`) | Date utilities | Available; not yet used |
-| `@tiptap/react` | Rich text | Available; not yet used |
+| Package                            | Use               | Gotcha                                                            |
+| ---------------------------------- | ----------------- | ----------------------------------------------------------------- |
+| `@mantine/core`                    | All UI components | Use Mantine breakpoints, not Tailwind, in components              |
+| `@tanstack/react-router`           | Client routing    | Must declare `Register` interface in `router.tsx` for type safety |
+| `@tabler/icons-react`              | Icons             | Tree-shakeable; import only what you use                          |
+| `recharts` (via `@mantine/charts`) | Charts            | Available; not yet used in this project                           |
+| `dayjs` (via `@mantine/dates`)     | Date utilities    | Available; not yet used                                           |
+| `@tiptap/react`                    | Rich text         | Available; not yet used                                           |
 
 **Critical gotchas:**
+
 1. **Routes in `src/routes/index.ts`**, not scattered elsewhere
 2. **Config in `src/config/constants.ts`** for single source of truth (NAV_ITEMS, paths, etc.)
 3. **Inline styles for Mantine**, `style={}` prop preferred over `className`
@@ -163,18 +175,21 @@ npm run preview      # Preview production build
 ## Adding Features
 
 ### New Showcase Page
+
 1. Create `src/pages/components/{name}.tsx` using `ComponentShowcase` template
 2. Add route to `src/routes/index.ts`
 3. Add metadata entry to `COMPONENT_SHOWCASE_ITEMS` in `src/config/constants.ts`
 4. Commit: `feat(pages): add {name} showcase`
 
 ### New Regular Page
+
 1. Create `src/pages/{name}.tsx`
 2. Add route to `src/routes/index.ts`
 3. Update `NAV_ITEMS` in `config/constants.ts` if it's main navigation
 4. Commit: `feat(pages): add {name} page`
 
 ### Config/Theme Updates
+
 - Colors/theme: Edit `src/config/theme.ts` (Mantine theme)
 - App-wide constants: Edit `src/config/constants.ts` (APP_CONFIG, NAV_ITEMS, COMPONENT_SHOWCASE_ITEMS)
 - Global CSS: Edit `src/index.css`
@@ -182,8 +197,19 @@ npm run preview      # Preview production build
 ---
 
 **TL;DR for agents:**
+
 - Routes live in `src/routes/index.ts`
 - Config/nav/paths in `src/config/constants.ts`
 - Showcase pages use `ComponentShowcase` template (DRY)
 - Commit with `type(scope): subject` format
 - Type-check before building (`tsc -b` runs first)
+
+---
+
+**For comprehensive documentation**, see the `docs/` directory:
+- `docs/guide/` - User guides and tutorials
+- `docs/reference/` - Technical reference
+- `docs/developer/` - Contributing guidelines
+- `docs/README.md` - Documentation index
+
+````
