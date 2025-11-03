@@ -200,13 +200,13 @@ Global styles defined in `src/index.css`:
 
 Used in responsive design:
 
-| Breakpoint | Min Width | CSS Variable              |
-| ---------- | --------- | ------------------------- |
-| `xs`       | 0px       | `var(--mantine-bp-xs)`    |
-| `sm`       | 576px     | `var(--mantine-bp-sm)`    |
-| `md`       | 768px     | `var(--mantine-bp-md)`    |
-| `lg`       | 992px     | `var(--mantine-bp-lg)`    |
-| `xl`       | 1200px    | `var(--mantine-bp-xl)`    |
+| Breakpoint | Min Width | CSS Variable           |
+| ---------- | --------- | ---------------------- |
+| `xs`       | 0px       | `var(--mantine-bp-xs)` |
+| `sm`       | 576px     | `var(--mantine-bp-sm)` |
+| `md`       | 768px     | `var(--mantine-bp-md)` |
+| `lg`       | 992px     | `var(--mantine-bp-lg)` |
+| `xl`       | 1200px    | `var(--mantine-bp-xl)` |
 
 **Usage**:
 ```typescript
@@ -356,30 +356,30 @@ Format code (if formatter configured)
 
 All routes defined in `src/routes/index.ts`:
 
-| Path | Component | Type |
-|------|-----------|------|
-| `/` | Home | Main page |
-| `/about` | About | Info page |
-| `/components/button` | ButtonShowcase | Showcase |
-| `/components/alert` | AlertShowcase | Showcase |
-| `*` | NotFound | 404 page |
+| Path                 | Component      | Type      |
+| -------------------- | -------------- | --------- |
+| `/`                  | Home           | Main page |
+| `/about`             | About          | Info page |
+| `/components/button` | ButtonShowcase | Showcase  |
+| `/components/alert`  | AlertShowcase  | Showcase  |
+| `*`                  | NotFound       | 404 page  |
 
 ## File Location Quick Reference
 
-| What | Where |
-|-----|-------|
-| Routes | `src/routes/index.ts` |
-| Config | `src/config/constants.ts` |
-| Theme | `src/config/theme.ts` |
-| Navigation | `src/components/Navigation.tsx` |
+| What              | Where                                  |
+| ----------------- | -------------------------------------- |
+| Routes            | `src/routes/index.ts`                  |
+| Config            | `src/config/constants.ts`              |
+| Theme             | `src/config/theme.ts`                  |
+| Navigation        | `src/components/Navigation.tsx`        |
 | Showcase Template | `src/components/ComponentShowcase.tsx` |
-| Custom Hooks | `src/hooks/` |
-| Pages | `src/pages/` |
-| Layouts | `src/layouts/` |
-| Global Styles | `src/index.css` |
-| App Setup | `src/app.tsx` |
-| Router | `src/router.tsx` |
-| Entry Point | `src/main.tsx` |
+| Custom Hooks      | `src/hooks/`                           |
+| Pages             | `src/pages/`                           |
+| Layouts           | `src/layouts/`                         |
+| Global Styles     | `src/index.css`                        |
+| App Setup         | `src/app.tsx`                          |
+| Router            | `src/router.tsx`                       |
+| Entry Point       | `src/main.tsx`                         |
 
 ## Environment Variables
 

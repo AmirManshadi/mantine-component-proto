@@ -7,6 +7,7 @@ Instructions for AI coding agents working on this project.
 A React 19 + TypeScript + Vite component showcase application demonstrating modern development patterns with Mantine UI, TanStack Router, Tailwind CSS, and PostCSS.
 
 **Hub Files**:
+
 - `src/routes/index.ts` - All route definitions
 - `src/config/constants.ts` - Centralized config
 - `src/components/ComponentShowcase.tsx` - DRY template
@@ -14,6 +15,7 @@ A React 19 + TypeScript + Vite component showcase application demonstrating mode
 ## Critical Architecture
 
 ### Data Flow
+
 ```
 config/constants.ts (NAV_ITEMS, COMPONENT_SHOWCASE_ITEMS, APP_CONFIG)
   ↓
@@ -75,12 +77,13 @@ export const routeTree = rootRoute.addChildren([homeRoute, aboutRoute, ...]);
 ```typescript
 import { routeTree } from "./routes";
 export const router = createRouter({
-  routeTree,
-  basepath: APP_CONFIG.basePath
+	routeTree,
+	basepath: APP_CONFIG.basePath
 });
 ```
 
 **To add a new page:**
+
 1. Create `src/pages/{name}.tsx`
 2. Add route export in `src/routes/index.ts` (e.g., `export const myRoute = createRoute(...)`)
 3. Add to `routeTree` children array
@@ -93,9 +96,9 @@ export const router = createRouter({
 ```typescript
 // src/components/ComponentShowcase.tsx
 interface ComponentShowcaseProps {
-  title: string;
-  description: string;
-  sections: Array<{ title: string; description?: string; children: ReactNode }>;
+	title: string;
+	description: string;
+	sections: Array<{ title: string; description?: string; children: ReactNode }>;
 }
 ```
 
@@ -161,14 +164,14 @@ npm run preview      # Preview production build
 
 ## Key Dependencies & Gotchas
 
-| Package | Use | Gotcha |
-|---------|-----|--------|
-| `@mantine/core` | All UI components | Use Mantine breakpoints, not Tailwind, in components |
-| `@tanstack/react-router` | Client routing | Must declare `Register` interface in `router.tsx` for type safety |
-| `@tabler/icons-react` | Icons | Tree-shakeable; import only what you use |
-| `recharts` (via `@mantine/charts`) | Charts | Available; not yet used in this project |
-| `dayjs` (via `@mantine/dates`) | Date utilities | Available; not yet used |
-| `@tiptap/react` | Rich text | Available; not yet used |
+| Package                            | Use               | Gotcha                                                            |
+| ---------------------------------- | ----------------- | ----------------------------------------------------------------- |
+| `@mantine/core`                    | All UI components | Use Mantine breakpoints, not Tailwind, in components              |
+| `@tanstack/react-router`           | Client routing    | Must declare `Register` interface in `router.tsx` for type safety |
+| `@tabler/icons-react`              | Icons             | Tree-shakeable; import only what you use                          |
+| `recharts` (via `@mantine/charts`) | Charts            | Available; not yet used in this project                           |
+| `dayjs` (via `@mantine/dates`)     | Date utilities    | Available; not yet used                                           |
+| `@tiptap/react`                    | Rich text         | Available; not yet used                                           |
 
 **Critical gotchas:**
 

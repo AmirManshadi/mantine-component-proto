@@ -345,15 +345,15 @@ Showcase pages follow a consistent template:
 
 ## Extensibility Points
 
-| Area | How to Extend |
-|------|---------------|
-| **Routes** | Add to `routes/index.ts` |
-| **Navigation** | Update `NAV_ITEMS` in constants |
+| Area              | How to Extend                                     |
+| ----------------- | ------------------------------------------------- |
+| **Routes**        | Add to `routes/index.ts`                          |
+| **Navigation**    | Update `NAV_ITEMS` in constants                   |
 | **Configuration** | Modify `config/constants.ts` or `config/theme.ts` |
-| **Hooks** | Create in `src/hooks/` and export from index |
-| **Components** | Add to `src/components/` |
-| **Pages** | Create in `src/pages/` |
-| **Styling** | Update `src/index.css` or theme |
+| **Hooks**         | Create in `src/hooks/` and export from index      |
+| **Components**    | Add to `src/components/`                          |
+| **Pages**         | Create in `src/pages/`                            |
+| **Styling**       | Update `src/index.css` or theme                   |
 
 ## Design Decisions
 

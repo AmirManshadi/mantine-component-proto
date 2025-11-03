@@ -207,9 +207,12 @@ npm run preview      # Preview production build
 ---
 
 **For comprehensive documentation**, see the `docs/` directory:
+
 - `docs/guide/` - User guides and tutorials
 - `docs/reference/` - Technical reference
 - `docs/developer/` - Contributing guidelines
 - `docs/README.md` - Documentation index
 
-````
+```
+
+```

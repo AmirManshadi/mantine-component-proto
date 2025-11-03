@@ -78,26 +78,26 @@ Check out:
 
 ### Guide Section
 
-| Document | Purpose | Read Time |
-|----------|---------|-----------|
-| [Getting Started](./guide/getting-started.md) | Installation and first steps | 5 min |
-| [Project Structure](./guide/project-structure.md) | File organization and layers | 10 min |
-| [Architecture Guide](./guide/architecture.md) | System design and data flow | 10 min |
-| [Development Guide](./guide/development.md) | Common tasks and workflows | 15 min |
+| Document                                          | Purpose                      | Read Time |
+| ------------------------------------------------- | ---------------------------- | --------- |
+| [Getting Started](./guide/getting-started.md)     | Installation and first steps | 5 min     |
+| [Project Structure](./guide/project-structure.md) | File organization and layers | 10 min    |
+| [Architecture Guide](./guide/architecture.md)     | System design and data flow  | 10 min    |
+| [Development Guide](./guide/development.md)       | Common tasks and workflows   | 15 min    |
 
 ### Reference Section
 
-| Document | Purpose | Use When |
-|----------|---------|----------|
+| Document                                    | Purpose               | Use When                  |
+| ------------------------------------------- | --------------------- | ------------------------- |
 | [Technical Reference](./reference/index.md) | API, config, commands | Need specific information |
 
 ### Developer Section
 
-| Document | Purpose | For |
-|----------|---------|-----|
-| [Contributing Guide](./developer/contributing.md) | Contribution guidelines | Contributing code |
-| [Copilot Instructions](./developer/copilot-instructions.md) | AI agent guide | Using AI for development |
-| [GitHub Pages Setup](./developer/github-pages-setup.md) | Deployment guide | Deploying to GitHub Pages |
+| Document                                                    | Purpose                 | For                       |
+| ----------------------------------------------------------- | ----------------------- | ------------------------- |
+| [Contributing Guide](./developer/contributing.md)           | Contribution guidelines | Contributing code         |
+| [Copilot Instructions](./developer/copilot-instructions.md) | AI agent guide          | Using AI for development  |
+| [GitHub Pages Setup](./developer/github-pages-setup.md)     | Deployment guide        | Deploying to GitHub Pages |
 
 ## 🎯 Common Tasks
 
