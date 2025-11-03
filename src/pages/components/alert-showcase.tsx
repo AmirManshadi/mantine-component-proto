@@ -1,4 +1,4 @@
-import { Container, Title, Text, Button, Alert, Group } from "@mantine/core";
+import { Container, Title, Text, Button, Alert, Group, Stack, Card } from "@mantine/core";
 import { Link } from "@tanstack/react-router";
 import {
 	IconAlertCircle,
@@ -8,26 +8,28 @@ import {
 
 export default function AlertShowcase() {
 	return (
-		<Container size="md" className="py-8">
-			<Group mb="lg">
-				<Link to="/">
-					<Button variant="outline">← Back Home</Button>
-				</Link>
-			</Group>
+		<Container size="md">
+			<Stack gap="lg">
+				<Group mb="lg">
+					<Link to="/">
+						<Button variant="outline">← Back Home</Button>
+					</Link>
+				</Group>
 
-			<Title order={1} className="mb-4 text-3xl font-bold">
-				Alert Component
-			</Title>
-			<Text className="text-lg text-gray-600 mb-8">
-				Explore different alert styles and variants available in Mantine UI.
-			</Text>
+				<div>
+					<Title order={1} mb="md">
+						Alert Component
+					</Title>
+					<Text size="lg" c="dimmed" mb="lg">
+						Explore different alert styles and variants available in Mantine UI.
+					</Text>
+				</div>
 
-			<div className="space-y-6">
-				<div className="bg-gray-50 p-6 rounded-lg">
-					<Title order={2} className="text-xl font-semibold mb-4">
+				<Card withBorder p="lg">
+					<Title order={2} mb="md">
 						Alert Variants
 					</Title>
-					<div className="space-y-4">
+					<Stack gap="md">
 						<Alert title="Light Alert" color="blue">
 							This is a light blue alert with a title.
 						</Alert>
@@ -37,14 +39,14 @@ export default function AlertShowcase() {
 						<Alert title="Outline Alert" color="green" variant="outline">
 							This is an outline green alert with a title.
 						</Alert>
-					</div>
-				</div>
+					</Stack>
+				</Card>
 
-				<div className="bg-gray-50 p-6 rounded-lg">
-					<Title order={2} className="text-xl font-semibold mb-4">
+				<Card withBorder p="lg">
+					<Title order={2} mb="md">
 						Alert with Icons
 					</Title>
-					<div className="space-y-4">
+					<Stack gap="md">
 						<Alert
 							icon={<IconAlertCircle size={16} />}
 							title="Warning"
@@ -52,7 +54,11 @@ export default function AlertShowcase() {
 						>
 							This is a warning alert with an icon.
 						</Alert>
-						<Alert icon={<IconCheck size={16} />} title="Success" color="green">
+						<Alert
+							icon={<IconCheck size={16} />}
+							title="Success"
+							color="green"
+						>
 							This is a success alert with an icon.
 						</Alert>
 						<Alert
@@ -62,14 +68,14 @@ export default function AlertShowcase() {
 						>
 							This is an information alert with an icon.
 						</Alert>
-					</div>
-				</div>
+					</Stack>
+				</Card>
 
-				<div className="bg-gray-50 p-6 rounded-lg">
-					<Title order={2} className="text-xl font-semibold mb-4">
+				<Card withBorder p="lg">
+					<Title order={2} mb="md">
 						Closeable Alerts
 					</Title>
-					<div className="space-y-4">
+					<Stack gap="md">
 						<Alert
 							title="Closeable Alert"
 							color="blue"
@@ -78,9 +84,9 @@ export default function AlertShowcase() {
 						>
 							This alert can be closed by clicking the close button.
 						</Alert>
-					</div>
-				</div>
-			</div>
+					</Stack>
+				</Card>
+			</Stack>
 		</Container>
 	);
 }

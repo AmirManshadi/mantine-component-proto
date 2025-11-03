@@ -1,23 +1,23 @@
-import { Container, Title, Text, Button, Group } from "@mantine/core";
+import { Container, Title, Text, Button, Group, Stack } from "@mantine/core";
 import { Link } from "@tanstack/react-router";
 
 export default function NotFound() {
 	return (
-		<Container size="md" className="py-8 text-center">
-			<Title order={1} className="mb-4 text-4xl font-bold text-red-600">
-				404 - Page Not Found
-			</Title>
-			<Text className="text-lg text-gray-600 mb-6">
-				Sorry, the page you're looking for doesn't exist. It might have been
-				moved or deleted.
-			</Text>
-			<Group justify="center">
-				<Link to="/">
-					<Button className="bg-blue-600 hover:bg-blue-700">
-						Go Back Home
-					</Button>
-				</Link>
-			</Group>
+		<Container size="md">
+			<Stack gap="lg" align="center" ta="center">
+				<Title order={1} c="red">
+					404 - Page Not Found
+				</Title>
+				<Text size="lg" c="dimmed">
+					Sorry, the page you're looking for doesn't exist. It might have been
+					moved or deleted.
+				</Text>
+				<Group justify="center">
+					<Link to="/">
+						<Button>Go Back Home</Button>
+					</Link>
+				</Group>
+			</Stack>
 		</Container>
 	);
 }
