@@ -1,5 +1,9 @@
 import { Alert, Stack } from "@mantine/core";
-import { IconAlertCircle, IconCheck, IconInfoCircle } from "@tabler/icons-react";
+import {
+	IconAlertCircle,
+	IconCheck,
+	IconInfoCircle
+} from "@tabler/icons-react";
 import { ComponentShowcase } from "../../components/ComponentShowcase";
 
 export default function AlertShowcase() {

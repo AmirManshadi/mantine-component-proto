@@ -176,57 +176,57 @@ All components access via imports
 
 ## Key Improvements
 
-| Aspect | Before | After |
-|--------|--------|-------|
-| **Route Definition** | All in `router.tsx` | Centralized in `routes/index.ts` |
-| **Configuration** | Scattered in files | `config/` directory |
-| **Navigation Logic** | In `root-layout.tsx` | `components/Navigation.tsx` |
-| **Theme Setup** | In `app.tsx` | `config/theme.ts` |
-| **Showcase Pages** | Code duplication | `ComponentShowcase.tsx` template |
-| **Constants** | Inline strings | `config/constants.ts` |
-| **Hooks** | N/A | `hooks/` infrastructure |
+| Aspect               | Before               | After                            |
+| -------------------- | -------------------- | -------------------------------- |
+| **Route Definition** | All in `router.tsx`  | Centralized in `routes/index.ts` |
+| **Configuration**    | Scattered in files   | `config/` directory              |
+| **Navigation Logic** | In `root-layout.tsx` | `components/Navigation.tsx`      |
+| **Theme Setup**      | In `app.tsx`         | `config/theme.ts`                |
+| **Showcase Pages**   | Code duplication     | `ComponentShowcase.tsx` template |
+| **Constants**        | Inline strings       | `config/constants.ts`            |
+| **Hooks**            | N/A                  | `hooks/` infrastructure          |
 
 ## File Responsibilities
 
 ### Core Files
 
-| File | Responsibility |
-|------|-----------------|
-| `src/app.tsx` | App providers and MantineProvider setup |
-| `src/router.tsx` | Router initialization using route tree |
-| `src/main.tsx` | React DOM render entry point |
-| `src/index.css` | Global styles and Tailwind directives |
+| File             | Responsibility                          |
+| ---------------- | --------------------------------------- |
+| `src/app.tsx`    | App providers and MantineProvider setup |
+| `src/router.tsx` | Router initialization using route tree  |
+| `src/main.tsx`   | React DOM render entry point            |
+| `src/index.css`  | Global styles and Tailwind directives   |
 
 ### Configuration
 
-| File | Contains |
-|------|----------|
+| File                      | Contains                                              |
+| ------------------------- | ----------------------------------------------------- |
 | `src/config/constants.ts` | `APP_CONFIG`, `NAV_ITEMS`, `COMPONENT_SHOWCASE_ITEMS` |
-| `src/config/theme.ts` | Mantine theme configuration |
+| `src/config/theme.ts`     | Mantine theme configuration                           |
 
 ### Routing
 
-| File | Contains |
-|------|----------|
-| `src/routes/index.ts` | All route definitions and route tree |
-| `src/router.tsx` | Router instance and type registration |
+| File                  | Contains                              |
+| --------------------- | ------------------------------------- |
+| `src/routes/index.ts` | All route definitions and route tree  |
+| `src/router.tsx`      | Router instance and type registration |
 
 ### Components
 
-| File | Purpose |
-|------|---------|
-| `src/components/Navigation.tsx` | Reusable navigation bar |
+| File                                   | Purpose                               |
+| -------------------------------------- | ------------------------------------- |
+| `src/components/Navigation.tsx`        | Reusable navigation bar               |
 | `src/components/ComponentShowcase.tsx` | Template for component showcase pages |
 
 ### Pages
 
-| File | Route | Purpose |
-|------|-------|---------|
-| `src/pages/home.tsx` | `/` | Home page with showcase grid |
-| `src/pages/about.tsx` | `/about` | About page |
-| `src/pages/not-found.tsx` | `*` | 404 fallback |
-| `src/pages/components/button.tsx` | `/components/button` | Button showcase |
-| `src/pages/components/alert.tsx` | `/components/alert` | Alert showcase |
+| File                              | Route                | Purpose                      |
+| --------------------------------- | -------------------- | ---------------------------- |
+| `src/pages/home.tsx`              | `/`                  | Home page with showcase grid |
+| `src/pages/about.tsx`             | `/about`             | About page                   |
+| `src/pages/not-found.tsx`         | `*`                  | 404 fallback                 |
+| `src/pages/components/button.tsx` | `/components/button` | Button showcase              |
+| `src/pages/components/alert.tsx`  | `/components/alert`  | Alert showcase               |
 
 ## Import Patterns
 

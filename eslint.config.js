@@ -6,7 +6,14 @@ import tseslint from "typescript-eslint";
 import { defineConfig, globalIgnores } from "eslint/config";
 
 export default defineConfig([
-	globalIgnores(["dist", ".stylelintrc.js", "eslint.config.js", "postcss.config.cjs", "tailwind.config.js", "vite.config.ts"]),
+	globalIgnores([
+		"dist",
+		".stylelintrc.js",
+		"eslint.config.js",
+		"postcss.config.cjs",
+		"tailwind.config.js",
+		"vite.config.ts"
+	]),
 	{
 		files: ["**/*.{ts,tsx}"],
 		ignores: ["**/*.{mjs,cjs,js,d.ts,d.mts}"],

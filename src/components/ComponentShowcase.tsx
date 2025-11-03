@@ -1,4 +1,12 @@
-import { Container, Stack, Group, Button, Card, Title, Text } from "@mantine/core";
+import {
+	Container,
+	Stack,
+	Group,
+	Button,
+	Card,
+	Title,
+	Text
+} from "@mantine/core";
 import { Link } from "@tanstack/react-router";
 import { type ReactNode } from "react";
 
@@ -18,7 +26,11 @@ interface ComponentShowcaseProps {
  * Reusable template component for component showcase pages
  * Reduces code duplication and maintains consistent structure
  */
-export function ComponentShowcase({ title, description, sections }: ComponentShowcaseProps) {
+export function ComponentShowcase({
+	title,
+	description,
+	sections
+}: ComponentShowcaseProps) {
 	return (
 		<Container size="md">
 			<Stack gap="lg">
