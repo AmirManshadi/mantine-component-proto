@@ -1,4 +1,12 @@
-import { Container, Title, Text, Button, Group, Stack, Card } from "@mantine/core";
+import {
+	Container,
+	Title,
+	Text,
+	Button,
+	Group,
+	Stack,
+	Card
+} from "@mantine/core";
 import { Link } from "@tanstack/react-router";
 
 export default function ButtonShowcase() {
@@ -16,7 +24,8 @@ export default function ButtonShowcase() {
 						Button Component
 					</Title>
 					<Text size="lg" c="dimmed" mb="lg">
-						Explore different button styles and variants available in Mantine UI.
+						Explore different button styles and variants available in Mantine
+						UI.
 					</Text>
 				</div>
 

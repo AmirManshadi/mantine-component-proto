@@ -1,4 +1,13 @@
-import { Container, Title, Text, Card, Group, Badge, Stack, SimpleGrid } from "@mantine/core";
+import {
+	Container,
+	Title,
+	Text,
+	Card,
+	Group,
+	Badge,
+	Stack,
+	SimpleGrid
+} from "@mantine/core";
 import { Link } from "@tanstack/react-router";
 import { IconAlertCircle, IconBubble } from "@tabler/icons-react";
 
@@ -88,7 +97,8 @@ export default function Home() {
 					<Stack gap="md">
 						<Title order={2}>About This App</Title>
 						<Text c="dimmed">
-							This application demonstrates a modern React development setup with:
+							This application demonstrates a modern React development setup
+							with:
 						</Text>
 						<ul style={{ marginLeft: "1.5rem", paddingLeft: 0 }}>
 							<li>React 19 with TypeScript for type safety</li>

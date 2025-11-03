@@ -10,10 +10,10 @@ export default function About() {
 						About MyApp
 					</Title>
 					<Text size="lg" c="dimmed" mb="md">
-						This page demonstrates TanStack Router's capability to handle multiple
-						routes and navigate between them seamlessly. TanStack Router is a modern
-						routing solution for React applications with excellent TypeScript
-						support.
+						This page demonstrates TanStack Router's capability to handle
+						multiple routes and navigate between them seamlessly. TanStack
+						Router is a modern routing solution for React applications with
+						excellent TypeScript support.
 					</Text>
 				</div>
 
